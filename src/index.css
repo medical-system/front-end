@@ -6,6 +6,7 @@
   body {
     @apply bg-dry overflow-hidden;
   }
+ 
 }
 
 @layer utilities {
@@ -15,4 +16,24 @@
   .flex-rows {
     @apply flex flex-row justify-center items-center;
   }
+  .transitions {
+    @apply transition-all duration-300 ease-in-out;
+  }
 }
+
+/* custom scroll bar */
+.sidebar::-webkit-scrollbar {
+  width: 0px;
+}
+.sidebar::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+ background-color:#07b8dbad;
+ border-radius: 30px;
+}
+.sidebar:Hover::-webkit-scrollbar{
+  width: 5px;
+}
+
