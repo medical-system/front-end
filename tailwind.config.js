@@ -7,10 +7,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        'subMain': '#07B8DB',
+        "main": '#183253',
+        "subMain": '#07B8DB',
         "text":"#f2f9fa",
+        "textGray":"#a0a0a0",
         "border":"#e8edee",
         "dry":"#f8fafa"
+      },
+      screens:{
+        'xs': '475px',
       }
     },
   },
