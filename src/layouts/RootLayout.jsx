@@ -16,7 +16,6 @@ const RootLayout = () => {
   return (
     // **** MAIN LAYOUT ****
     <div className="grid xl:grid-cols-12 w-full 2xl:max-w-[2000px]">
-
       {/* **** SIDEBAR DRAWER **** */}
       <div
         className={`fixed xl-hidden  ${
@@ -32,10 +31,12 @@ const RootLayout = () => {
       >
         <Sidebar />
       </div>
-      <main className={`col-span-10 h-screen overflow-y-scroll relative`}>
+      <div className={`col-span-10 xl-h-screen overflow-y-auto relative`}>
         <Navbar setIsOpen={setIsOpen} />
-        <Outlet />
-      </main>
+        <main className="xs:px-8 px-2 pt-24">
+          <Outlet />
+        </main>
+      </div>
     </div>
   );
 };
