@@ -26,7 +26,7 @@ const Router = () => {
                 },
                 {
                     path:"dashboard",
-                    element:<div>dashboard</div>
+                    element:<DashboardPage/>
                 },
                 {
                     path:"profile",
@@ -41,3 +41,4 @@ const Router = () => {
 export default Router
 
 const AuthLayoutPage = Loadable(lazy(()=>import("../layouts/AuthLayout.jsx")));
+const DashboardPage = Loadable(lazy(()=>import("../pages/Dashboard.jsx")));

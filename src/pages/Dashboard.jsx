@@ -1,7 +1,15 @@
+import Banner from "../views/dashboard/Banner"
+import Statistics from "../views/dashboard/Statistics"
 
 const Dashboard = () => {
   return (
-    <div>Dashboard</div>
+    <>
+    {/*Statistics Cards*/}
+    <Statistics/>
+
+    {/* Banner img */}
+    <Banner/>
+    </>
   )
 }
 
