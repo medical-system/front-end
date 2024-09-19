@@ -5,7 +5,7 @@ import ProfileMenu from "./ui/menu/ProfileMenu";
 
 const Navbar = ({ setIsOpen }) => {
   return (
-    <div className="xl:w-5/6 w-full 2xl:max-w-[1640px] bg-dry grid md:grid-cols-2 grid-cols-12 items-center bg-opacity-95 fixed top-[0.75rem] z-40 xs:px-8 px-2">
+    <div className="xl:w-5/6 w-full 2xl:max-w-[1640px] bg-dry grid md:grid-cols-2 grid-cols-12 items-center bg-opacity-95 fixed top-0 z-40 xs:px-8 px-2">
       {/*header left side*/}
       <div className="md:col-span-1 sm:col-span-11 col-span-10 flex gap-4 items-center md:py-0 py-4">
         <button onClick={() => setIsOpen(true)} className="open-btn block xl:hidden border text-2xl bg-greyed w-16 md:w-12 h-12 rounded-md flex-colo text-textGray transitions hover:bg-border center">
