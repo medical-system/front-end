@@ -31,7 +31,7 @@ const RootLayout = () => {
       >
         <Sidebar />
       </div>
-      <div className={`col-span-10 xl-h-screen overflow-y-auto relative`}>
+      <div className={`col-span-10 xl:h-screen overflow-y-auto relative`}>
         <Navbar setIsOpen={setIsOpen} />
         <main className="xs:px-8 px-2 pt-24">
           <Outlet />
