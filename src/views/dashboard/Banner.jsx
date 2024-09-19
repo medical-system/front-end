@@ -1,7 +1,9 @@
 import BannerImg from "../../assets/banner.avif";
+import { AreaChart } from "../../components/charts/AreaChart";
 const Banner = () => {
   return (
     <div className="w-full my-6 grid xl:grid-cols-8 grid-cols-1 gap-6">
+      {/* Banner Image */}
       <div className="xl:col-span-6  w-full">
         <div className="bg-white rounded-xl border-[1px] border-border relative">
           <img
@@ -25,6 +27,28 @@ const Banner = () => {
             </div>
           </div>
         </div>
+
+        {/* Area Chart */}
+        <div className="mt-6 bg-white rounded-xl border-[1px] border-border p-5">
+
+          {/*title*/}
+          <div className="flex-btn gap-2">
+            <h2 className="text-sm font-medium">Earning Reports</h2>
+            <p className="flex gap-4 text-sm items-center">
+              5.44%{" "}
+              <span className="py-1 px-2 bg-subMain text-white text-xs rounded-xl">
+                +2.4%
+              </span>
+            </p>
+          </div>
+          {/* Chart */}
+          <div className="mt-4">
+            <AreaChart/>
+          </div>
+        </div>
+
+        {/*table*/}
+        <div></div>
       </div>
     </div>
   );
