@@ -14,7 +14,7 @@ const RootLayout = () => {
     return <Navigate to="/auth/login" />;
   }
   return (
-    // **** MAIN LAYOUT ****
+    // ************ LEFT SIDE **************
     <div className="grid xl:grid-cols-12 w-full 2xl:max-w-[2000px]">
       {/* **** SIDEBAR DRAWER **** */}
       <div
@@ -31,7 +31,9 @@ const RootLayout = () => {
       >
         <Sidebar />
       </div>
-      <div className={`col-span-10 xl:h-screen overflow-y-auto relative`}>
+
+        {/********* RIGHT SIDE***********/}
+      <div className={`col-span-10 h-screen overflow-y-auto relative`}>
         <Navbar setIsOpen={setIsOpen} />
         <main className="xs:px-8 px-2 pt-24">
           <Outlet />
