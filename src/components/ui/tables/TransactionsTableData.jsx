@@ -2,7 +2,7 @@
 import { TransactionsData } from "../../../@facke-data/transactionsData";
 const TableHead = ["ID", "Patient", "Date", "Status", "Amount(tsh)", "Method"];
 
-const RenderCell = ({ props }) => {
+const RenderPatientCell = ({ props }) => {
   return (
     <div className="flex gap-4 items-center">
       <img
@@ -58,8 +58,8 @@ const TransactionsTableData = () => {
             <td className="text-start text-sm py-4 px-2 whitespace-nowrap">
               {data.id}
             </td>
-            <td className="text-start text-sm py-4 px-2 whitespace-nowrap">
-              <RenderCell props={data.patient} />
+            <td className="text-start text-sm py-4 px-2 whitespace-nowrap md:min-w-max min-w-[200px]">
+              <RenderPatientCell props={data.patient} />
             </td>
             <td className="text-start text-sm py-4 px-2 whitespace-nowrap">
               {data.date}

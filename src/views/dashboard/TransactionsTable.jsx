@@ -14,7 +14,7 @@ const TransactionsTable = () => {
         </p>
       </div>
       {/* Table Data*/}
-      <div className="mt-4 overflow-x-scroll">
+      <div className="mt-4 overflow-x-auto">
         <TransactionsTableData/>
       </div>
     </div>
