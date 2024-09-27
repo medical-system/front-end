@@ -7,7 +7,7 @@ const Dashboard = () => {
     {/*Statistics Cards*/}
     <Statistics/>
 
-    {/* Banner img */}
+    {/* Banner */}
     <Banner/>
     </>
   )
