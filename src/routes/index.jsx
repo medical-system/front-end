@@ -31,6 +31,10 @@ const Router = () => {
                 {
                     path:"profile",
                     element:<ProfilePage/>
+                },
+                {
+                    path:"patients",
+                    element:<PatientPage/>
                 }
 
             ]
@@ -43,3 +47,4 @@ export default Router
 const AuthLayoutPage = Loadable(lazy(()=>import("../layouts/AuthLayout.jsx")));
 const DashboardPage = Loadable(lazy(()=>import("../pages/Dashboard.jsx")));
 const ProfilePage = Loadable(lazy(()=>import("../pages/Profile.jsx")));
+const PatientPage = Loadable(lazy(()=>import("../pages/Patients.jsx")));

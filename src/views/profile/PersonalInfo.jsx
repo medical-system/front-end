@@ -1,5 +1,5 @@
 import UsedInput from "../../components/hook-form/UsedInput";
-import TitleSelect from "../../components/ui/select/TitleSelect";
+import TitleSelect from "../../components/ui/select/BasicSelect.jsx";
 import Uploader from "../../components/Uploader";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { IoIosCheckmarkCircleOutline } from "react-icons/io";

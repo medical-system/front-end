@@ -5,6 +5,10 @@
 @layer base {
   body {
     @apply bg-dry overflow-hidden;
+    
+  }
+  input {
+    @apply outline-none bg-transparent w-full
   }
  
 }
@@ -41,4 +45,8 @@
 }
 .sidebar:Hover::-webkit-scrollbar{
   width: 5px;
+}
+
+.react-datepicker-wrapper {
+  width: 100% !important;
 }
