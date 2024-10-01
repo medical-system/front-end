@@ -5,6 +5,8 @@ import Loadable from "../Loadable.jsx";
 import Login from "../pages/auth/Login.jsx";
 import { lazy } from "react";
 import Register from "../pages/auth/Register.jsx";
+import CreatePatient from "../pages/CreatePatient.jsx";
+import ViewPatient from "../pages/ViewPatient.jsx";
 
 const Router = () => {
     return useRoutes([
@@ -34,8 +36,16 @@ const Router = () => {
                 },
                 {
                     path:"patients",
-                    element:<PatientPage/>
-                }
+                    element:<PatientPage/>,
+                },
+                {
+                    path:"patients/create",
+                    element:<CreatePatient/>,
+                },
+                {
+                    path:"patients/view/:slug",
+                    element:<ViewPatient/>,
+                },
 
             ]
         }

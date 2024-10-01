@@ -5,12 +5,10 @@
 @layer base {
   body {
     @apply bg-dry overflow-hidden;
-    
   }
   input {
-    @apply outline-none bg-transparent w-full
+    @apply outline-none bg-transparent w-full;
   }
- 
 }
 
 @layer utilities {
@@ -29,6 +27,9 @@
   .center {
     @apply flex items-center justify-center;
   }
+  .button-fb {
+    box-shadow: 0 24px 48px 0 #669db5a6;
+  }
 }
 
 /* custom scroll bar */
@@ -40,13 +41,28 @@
 }
 
 .sidebar::-webkit-scrollbar-thumb {
- background-color:#07b8dbad;
- border-radius: 30px;
+  background-color: #07b8dbad;
+  border-radius: 30px;
 }
-.sidebar:Hover::-webkit-scrollbar{
+.sidebar:hover::-webkit-scrollbar {
   width: 5px;
 }
 
 .react-datepicker-wrapper {
   width: 100% !important;
+}
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    transform: translateY(-25%);
+  }
+  50% {
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    transform: none;
+  }
 }

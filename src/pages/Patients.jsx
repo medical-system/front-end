@@ -1,5 +1,6 @@
 import PatientsCards from "../views/patients/PatientsCards";
 import PatientsTable from "../views/patients/PatientsTable";
+import ButtonAdd from "../components/ButtonAdd";
 
 const Patients = () => {
   return (
@@ -11,6 +12,9 @@ const Patients = () => {
 
       {/*patients table*/}
       <PatientsTable />
+
+      {/* add patient */}
+      <ButtonAdd path={'/patients/create'}/>
     </>
   );
 };
