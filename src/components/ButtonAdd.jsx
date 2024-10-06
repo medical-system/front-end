@@ -5,7 +5,7 @@ import { BiPlus } from "react-icons/bi"
 const ButtonAdd = ({path}) => {
     const navigate = useNavigate()
   return (
-    <button onClick={() => navigate(path)} className='w-16 animate-bounce h-16 border border-border z-50 bg-subMain text-white rounded-full center fixed bottom-8 right-12 button-fb'>
+    <button onClick={() => navigate(path)} className='w-16 animate-bounce h-16 border border-border z-40 bg-subMain text-white rounded-full center fixed bottom-8 right-12 button-fb'>
         <BiPlus className='text-2xl' />
     </button>
   )

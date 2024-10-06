@@ -7,6 +7,7 @@ import { lazy } from "react";
 import Register from "../pages/auth/Register.jsx";
 import CreatePatient from "../pages/CreatePatient.jsx";
 import ViewPatient from "../pages/ViewPatient.jsx";
+import NewMedicalRecord from "../pages/NewMedicalRecord.jsx";
 
 const Router = () => {
     return useRoutes([
@@ -45,6 +46,10 @@ const Router = () => {
                 {
                     path:"patients/view/:slug",
                     element:<ViewPatient/>,
+                },
+                {
+                    path:"patients/view/:slug/new-medical-record",
+                    element:<NewMedicalRecord/>,
                 },
 
             ]

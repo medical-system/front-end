@@ -1,0 +1,32 @@
+export const Invoices = [
+    {
+        invoiceId:'206719',
+        createDate:'01/01/2022',
+        dueDate:'16/01/2022',
+        amount:'1000',
+    },
+    {
+        invoiceId:'206712',
+        createDate:'03/01/2022',
+        dueDate:'16/01/2022',
+        amount:'1300',
+    },
+    {
+        invoiceId:'206713',
+        createDate:'03/01/2022',
+        dueDate:'16/01/2022',
+        amount:'1300',
+    },
+    {
+        invoiceId:'206714',
+        createDate:'03/01/2022',
+        dueDate:'16/01/2022',
+        amount:'1300',
+    },
+    {
+        invoiceId:'206715',
+        createDate:'03/01/2022',
+        dueDate:'16/01/2022',
+        amount:'1300',
+    },
+]

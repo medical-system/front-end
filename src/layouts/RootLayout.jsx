@@ -20,7 +20,7 @@ const RootLayout = () => {
       <div
         className={`fixed xl-hidden  ${
           isOpen ? "block" : "hidden"
-        } w-full h-full top-0 left-0 bg-black opacity-[0.4] z-[100]`}
+        } w-full h-full top-0 left-0 bg-black opacity-[0.4] z-[45]`}
       />
 
       {/* **** SIDEBAR **** */}

@@ -28,16 +28,16 @@ const PatientForm = () => {
         </div>
       </div>
       <UsedInput lable="Emergency Contact" type="number" />
-      <div className="flex flex-col gap-3">
-        <label className="text-black text-sm">Date of Birth</label>
+      <div className="text-sm w-full flex-col gap-2 flex">
+        <label className="text-black">Date of Birth</label>
         <div className="w-full bg-transparent text-sm p-4 border border-border font-light rounded-lg focus:border focus:border-subMain">
           <DatePicker
             selected={startDate}
             onChange={(date) => setStartDate(date)}
           />
         </div>
-        <UsedInput lable="Address" type="number" />
       </div>
+      <UsedInput lable="Address" type="number" />
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
         <button className="w-full flex-rows gap-4 hover:opacity-80 transitions bg-subMain text-white text-sm font-medium px-2 py-4 rounded">
           Delete Account
