@@ -4,7 +4,7 @@ export const useSidebarToggle = () => {
   const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
     const hanleOpenSidebar = (e) => {
-      if (!e.target.closest(".sidebar") && !e.target.closest(".open-btn")
+      if (!e.target.closest(".open-btn")
       ) {
         setIsOpen(false);
       }
