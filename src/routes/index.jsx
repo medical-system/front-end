@@ -53,6 +53,10 @@ const Router = () => {
                 },
 
             ]
+        },
+        {
+            path: "*",
+            element: <h2>Not Found</h2>
         }
     ])
 }

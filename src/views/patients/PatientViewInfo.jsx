@@ -56,7 +56,7 @@ const PatientViewInfo = () => {
   ];
   
   return (
-    <div className="grid grid-cols-12 gap-6 my-8 items-start">
+    <div className="grid grid-cols-12 gap-6 my-8 items-start overflow-hidden">
       {/* left side */}
       <div
         data-aos="fade-right"
