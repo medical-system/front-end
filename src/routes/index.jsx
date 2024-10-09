@@ -8,7 +8,7 @@ import Register from "../pages/auth/Register.jsx";
 import CreatePatient from "../pages/CreatePatient.jsx";
 import ViewPatient from "../pages/ViewPatient.jsx";
 import NewMedicalRecord from "../pages/NewMedicalRecord.jsx";
-
+import Receptions from "../pages/Receptions.jsx";
 const Router = () => {
     return useRoutes([
         {
@@ -38,6 +38,10 @@ const Router = () => {
                 {
                     path:"patients",
                     element:<PatientPage/>,
+                },
+                {
+                    path:"receptions",
+                    element:<Receptions/>,
                 },
                 {
                     path:"patients/create",

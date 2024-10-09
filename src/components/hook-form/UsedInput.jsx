@@ -2,7 +2,7 @@ import { PropTypes } from "prop-types";
 const UsedInput = ({ lable, type, ...others }) => {
   return (
     <div className="text-sm w-full">
-      <label className="text-black text-sm ">{lable}</label>
+      <label className="text-black text-sm">{lable}</label>
       <input
         {...others}
         type={type}

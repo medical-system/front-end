@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 import { BiDotsHorizontalRounded } from "react-icons/bi";
 import { CgEye } from "react-icons/cg";
 import { RiDeleteBinLine } from "react-icons/ri";
+import {EditStuffDialog} from "../dialogs/EditDialog";
 
 
 // eslint-disable-next-line react/prop-types
-export default function ActionDropDown({ id }) {
+export default function ActionDropDown({ id, hasEdit = false }) {
   return (
     <Menu className="text-sm w-full relative" as="div">
       <MenuButton>
@@ -15,6 +16,9 @@ export default function ActionDropDown({ id }) {
         </div>
       </MenuButton>
       <MenuItems className="flex flex-col z-50 gap-4 absolute left-0  bg-white rounded-md shadow-lg py-4 px-6 ring-1 ring-border focus:outline-none">
+        {hasEdit && <MenuItem onClick={() => close()}>
+          <EditStuffDialog id={id} />
+        </MenuItem>}
         <MenuItem>
           <Link
             to={`view/:${id}`}
@@ -34,3 +38,5 @@ export default function ActionDropDown({ id }) {
     </Menu>
   );
 }
+
+

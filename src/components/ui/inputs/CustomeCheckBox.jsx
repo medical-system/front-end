@@ -27,7 +27,7 @@ const CustomeCheckBox = ({ label }) => {
           </svg>
         </span>
       </label>
-      <p className="text-black text-xs ml-2">{label}</p>
+       {label && <p className="text-black text-xs ml-2">{label}</p>}
     </div>
   );
 };
