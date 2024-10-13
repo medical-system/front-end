@@ -40,7 +40,7 @@ const LoginForm = () => {
           <p className="text-red-500">{errors.afterSubmit.message}</p>
         )}
       </div>
-      <div className="flex-colo gap-4">
+      <div className="flex-colo gap-4 w-full">
         <RHFTextField name="email" label="Email" type="email" />
         <RHFTextField name="password" label="Password" type="password" />
         <button className="w-full flex-rows gap-4 hover:opacity-80 transitions bg-subMain text-white text-sm font-medium px-2 py-4 rounded leading-[1.2]">

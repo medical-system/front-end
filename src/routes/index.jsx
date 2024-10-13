@@ -5,10 +5,8 @@ import Loadable from "../Loadable.jsx";
 import Login from "../pages/auth/Login.jsx";
 import { lazy } from "react";
 import Register from "../pages/auth/Register.jsx";
-import CreatePatient from "../pages/CreatePatient.jsx";
-import ViewPatient from "../pages/ViewPatient.jsx";
-import NewMedicalRecord from "../pages/NewMedicalRecord.jsx";
-import Receptions from "../pages/Receptions.jsx";
+import {Dashboard} from "../pages";
+
 const Router = () => {
     return useRoutes([
         {
@@ -21,41 +19,16 @@ const Router = () => {
         },
         {
             path: "/",
-            element:<RootLayout/>,
-            children:[
+            element: <RootLayout />,
+            children: [
                 {
-                    element:<Navigate to={"/dashboard"} replace/>,
-                    index:true
+                    element: <Navigate to={"dashboard"} replace />,
+                    index: true
                 },
                 {
-                    path:"dashboard",
-                    element:<DashboardPage/>
+                    element: <Dashboard />,
+                    path: "dashboard"
                 },
-                {
-                    path:"profile",
-                    element:<ProfilePage/>
-                },
-                {
-                    path:"patients",
-                    element:<PatientPage/>,
-                },
-                {
-                    path:"receptions",
-                    element:<Receptions/>,
-                },
-                {
-                    path:"patients/create",
-                    element:<CreatePatient/>,
-                },
-                {
-                    path:"patients/view/:slug",
-                    element:<ViewPatient/>,
-                },
-                {
-                    path:"patients/view/:slug/new-medical-record",
-                    element:<NewMedicalRecord/>,
-                },
-
             ]
         },
         {
@@ -67,7 +40,4 @@ const Router = () => {
 
 export default Router
 
-const AuthLayoutPage = Loadable(lazy(()=>import("../layouts/AuthLayout.jsx")));
-const DashboardPage = Loadable(lazy(()=>import("../pages/Dashboard.jsx")));
-const ProfilePage = Loadable(lazy(()=>import("../pages/Profile.jsx")));
-const PatientPage = Loadable(lazy(()=>import("../pages/Patients.jsx")));
+const AuthLayoutPage = Loadable(lazy(() => import("../layouts/AuthLayout.jsx")));

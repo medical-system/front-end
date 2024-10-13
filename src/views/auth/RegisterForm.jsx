@@ -42,9 +42,9 @@ const RegisterForm = () => {
         )}
       </div>
       <div className="flex-colo gap-4">
-        <RHFTextField name="fullName" label="Full Name" type="text" />
-        <RHFTextField name="email" label="Email" type="email" />
-        <RHFTextField name="password" label="Password" type="password" />
+        <RHFTextField name="fullName" label="Full Name" type="text" placeholder="john doe"/>
+        <RHFTextField name="email" label="Email" type="email" placeholder="yZl9N@example.com"/>
+        <RHFTextField name="password" label="Password" type="password" placeholder="*******"/>
         <button className="w-full flex-rows gap-4 hover:opacity-80 transitions bg-subMain text-white text-sm font-medium px-2 py-4 rounded leading-[1.2]">
           Register <BiLogInCircle size={20} className="text-xl text-white" />
         </button>

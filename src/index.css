@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar {
+  display:none;
+}
 @layer base {
   body {
     @apply bg-dry overflow-hidden;
@@ -34,6 +37,7 @@
 
 /* custom scroll bar */
 .sidebar::-webkit-scrollbar {
+  display:block;
   width: 0px;
 }
 .sidebar::-webkit-scrollbar-track {

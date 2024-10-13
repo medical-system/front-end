@@ -5,13 +5,15 @@ const AuthLayout = () => {
     <div className="max-w-full min-h-screen flex justify-center items-center m-3">
       <div className="md:w-2/5 p-8 rounded-2xl mx-auto bg-white flex-colo text-center">
 
-      {/* logo */}
-      <div>
-        <img src={Logo} alt="logo" className="w-48 h-16 object-contain mx-auto"/>
-      </div>
+        {/* logo */}
+        <div>
+          <img src={Logo} alt="logo" className="w-48 h-16 object-contain mx-auto" width={192} height={64} loading="lazy"  type="image/webp"/>
+        </div>
 
         {/* form */}
-        <Outlet />
+        <div className="w-full">
+          <Outlet />
+        </div>
       </div>
     </div>
   );
