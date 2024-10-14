@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import { Listbox, Menu, Switch } from '@headlessui/react';
 import { BiLoaderCircle } from 'react-icons/bi';
 import DatePicker from 'react-datepicker';
 import { FaCheck } from 'react-icons/fa';
-import {PropTypes} from "prop-types";
+
 export function Input({ label, name, type, color, placeholder, register }) {
   return (
     <div className="text-sm w-full">
@@ -24,15 +25,6 @@ export function Input({ label, name, type, color, placeholder, register }) {
       />
     </div>
   );
-}
-
-Input.propTypeps = {
-  label:PropTypes.string,  
-  name: PropTypes.string,
-  type: PropTypes.string,
-  color: PropTypes.string,
-  placeholder: PropTypes.string,
-  register: PropTypes.func,
 }
 
 // button
@@ -57,7 +49,6 @@ export function Button({ label, onClick, loading, Icon }) {
 }
 
 // select
-
 export function MenuSelect({ children, datas, item: data }) {
   return (
     <div className="text-sm w-full relative">
@@ -81,7 +72,6 @@ export function MenuSelect({ children, datas, item: data }) {
 }
 
 // select 2
-
 export function Select({ children, selectedPerson, setSelectedPerson, datas }) {
   return (
     <div className="text-sm relative w-full ">
@@ -107,7 +97,6 @@ export function Select({ children, selectedPerson, setSelectedPerson, datas }) {
 }
 
 // switch
-
 export function Switchi({ checked, onChange }) {
   return (
     <Switch
@@ -126,7 +115,6 @@ export function Switchi({ checked, onChange }) {
 }
 
 // textarea
-
 export function Textarea({ label, name, register, placeholder, rows }) {
   return (
     <div className="text-sm w-full">
@@ -144,7 +132,6 @@ export function Textarea({ label, name, register, placeholder, rows }) {
 }
 
 // date picker
-
 export function DatePickerComp({ label, startDate, onChange }) {
   return (
     <div className="text-sm w-full">
@@ -160,7 +147,6 @@ export function DatePickerComp({ label, startDate, onChange }) {
 }
 
 // time picker
-
 export function TimePickerComp({ label, startDate, onChange }) {
   return (
     <div className="text-sm w-full">
@@ -180,7 +166,6 @@ export function TimePickerComp({ label, startDate, onChange }) {
 }
 
 // checkbox
-
 export function Checkbox({ label, name, onChange, checked }) {
   return (
     <div className="text-sm w-full flex flex-row items-center">
@@ -210,7 +195,6 @@ export function Checkbox({ label, name, onChange, checked }) {
 }
 
 // from to date picker
-
 export function FromToDate({ label, startDate, onChange, endDate, bg }) {
   return (
     <div className="text-sm w-full flex flex-col gap-2">
