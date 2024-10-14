@@ -204,7 +204,7 @@ export const medicineData = [
   },
 ];
 
-export const sortsDatas = {
+export const sortData = {
   status: [
     {
       id: 1,
