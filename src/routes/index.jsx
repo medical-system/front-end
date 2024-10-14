@@ -5,6 +5,7 @@ import Login from "../pages/auth/Login.jsx";
 import Register from "../pages/auth/Register.jsx";
 import Dashboard from "../pages/Dashboard.jsx";
 import AuthLayout from "../layouts/AuthLayout.jsx";
+import Settings from "../pages/Settings.jsx";
 
 const Router = () => {
     return useRoutes([
@@ -27,6 +28,10 @@ const Router = () => {
                 {
                     element: <Dashboard />,
                     path: "dashboard"
+                },
+                {
+                    element: <Settings />,
+                    path: "settings"
                 },
             ]
         },
