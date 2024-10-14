@@ -22,7 +22,7 @@ const Navbar = ({ setIsOpen }) => {
       title: 'Logout',
       icon: AiOutlinePoweroff,
       onClick: () => {
-        navigate('/login');
+        navigate('/auth/login');
       },
     },
   ];
