@@ -1,5 +1,5 @@
 import Chart from 'react-apexcharts';
-export function AreaChart() {
+export default function AreaChart() {
     const options = {
       chart: {
         id: 'area-datetime',

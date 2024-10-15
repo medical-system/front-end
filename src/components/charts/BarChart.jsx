@@ -1,6 +1,6 @@
 import Chart from 'react-apexcharts';
 import {PropTypes} from "prop-types";
-export function BarChart({ color,data }) {
+export default function BarChart({ colors,data }) {
   const options = {
     chart: {
       id: 'basic-bar',
@@ -76,7 +76,7 @@ export function BarChart({ color,data }) {
         borderRadius: 2,
       },
     },
-    colors: [color],
+    colors: [colors],
   };
   const series = [
     {
@@ -97,6 +97,6 @@ export function BarChart({ color,data }) {
 }
 
 BarChart.propTypes = {
-  color: PropTypes.string,
+  colors: PropTypes.string,
   data: PropTypes.array
 }

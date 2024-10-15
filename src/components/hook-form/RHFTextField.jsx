@@ -8,7 +8,7 @@ const RHFTextField = ({name, label, ...other}) => {
       name={name}
       control={control}
       render={({ field, fieldState: { error } }) => (
-        <div className="text-center flex-colo items-start">
+        <div className="flex flex-col w-full items-start justify-start">
           <label htmlFor="email">{label}</label>
           <input
             {...field}
