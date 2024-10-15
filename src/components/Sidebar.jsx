@@ -12,7 +12,7 @@ const Sidebar = () => {
       {/* links */}
       <div className="flex-colo gap-2 mt-6">
           {NavLinks.map((item)=>(
-            <NavLink key={item.title} className={`active
+            <NavLink key={item.title} className={`
             flex gap-4 transitions group items-center w-full p-4 rounded-lg hover:bg-text`} to={item.path}>
               {<item.icon className="text-subMain text-xl"/>}
               <p className="text-sm font-medium group-hover:text-subMain text-gray-500 transitions">{item.title}</p>

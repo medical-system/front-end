@@ -1,7 +1,6 @@
 import  { useState } from 'react';
 import { invoicesData } from '../../data';
-import { toast } from 'react-hot-toast';
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { IoArrowBackOutline } from 'react-icons/io5';
 import { FiEdit } from 'react-icons/fi';
 import { MdOutlineCloudDownload } from 'react-icons/md';
@@ -13,14 +12,14 @@ import SenderReceverComp from '../../views/SenderReceverComp';
 import { InvoiceProductsTable } from '../../components/ui/tables';
 
 function PreviewInvoice() {
-  const { id } = useParams();
+  const id = 206719
   const [isOpen, setIsoOpen] = useState(false);
   const [isShareOpen, setIsShareOpen] = useState(false);
 
   const buttonClass =
     'bg-subMain flex-rows gap-3 bg-opacity-5 text-subMain rounded-lg border border-subMain border-dashed px-4 py-3 text-sm';
 
-  const invoice = invoicesData.find((invoice) => invoice.id.toString() === id);
+  const invoice = invoicesData.find((invoice) => invoice.id === id);
 
   return (
     <>
@@ -61,17 +60,13 @@ function PreviewInvoice() {
             Share <RiShareBoxLine />
           </button>
           <button
-            onClick={() => {
-              toast.error('This feature is not available yet');
-            }}
+            onClick={() => {}}
             className={buttonClass}
           >
             Download <MdOutlineCloudDownload />
           </button>
           <button
-            onClick={() => {
-              toast.error('This feature is not available yet');
-            }}
+            onClick={() => {}}
             className={buttonClass}
           >
             Print <AiOutlinePrinter />
