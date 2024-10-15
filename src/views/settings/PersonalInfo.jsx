@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import Uploder from '../../components/Uploader';
-import { sortData } from '../../data';
+import { sortsDatas } from '../../data';
 import { Button, DatePickerComp, Input, Select } from '../../components/Form';
 import { BiChevronDown } from 'react-icons/bi';
 import { toast } from 'react-hot-toast';
@@ -9,9 +9,9 @@ import { HiOutlineCheckCircle } from 'react-icons/hi';
 import { RiDeleteBin5Line } from 'react-icons/ri';
 
 function PersonalInfo({ titles , setImg }) {
-    const [title, setTitle] = React.useState(sortData.title[0]);
+    const [title, setTitle] = React.useState(sortsDatas.title[0]);
     const [date, setDate] = React.useState(new Date());
-    const [gender, setGender] = React.useState(sortData.genderFilter[0]);
+    const [gender, setGender] = React.useState(sortsDatas.genderFilter[0]);
     return (
         <div className="flex-colo gap-4">
             {/* uploader */}
@@ -26,7 +26,7 @@ function PersonalInfo({ titles , setImg }) {
                     <Select
                         selectedPerson={title}
                         setSelectedPerson={setTitle}
-                        datas={sortData.title}
+                        datas={sortsDatas.title}
                     >
                         <div className="w-full flex-btn text-textGray text-sm p-4 border border-border font-light rounded-lg focus:border focus:border-subMain">
                             {title?.name} <BiChevronDown className="text-xl" />
@@ -49,7 +49,7 @@ function PersonalInfo({ titles , setImg }) {
                         <Select
                             selectedPerson={gender}
                             setSelectedPerson={setGender}
-                            datas={sortData.genderFilter}
+                            datas={sortsDatas.genderFilter}
                         >
                             <div className="w-full flex-btn text-textGray text-sm p-4 border border-border font-light rounded-lg focus:border focus:border-subMain">
                                 {gender?.name} <BiChevronDown className="text-xl" />

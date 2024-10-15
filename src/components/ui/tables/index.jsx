@@ -1,7 +1,8 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { MenuSelect } from '../../Form';
 import { BiDotsHorizontalRounded } from 'react-icons/bi';
-import { FiEdit, FiEye } from 'react-icons/fi';
+import {  FiEdit, FiEye } from 'react-icons/fi';
 import { RiDeleteBin6Line, RiDeleteBinLine } from 'react-icons/ri';
 import { toast } from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom';
@@ -114,14 +115,14 @@ export function InvoiceTable({ data }) {
       title: 'Edit',
       icon: FiEdit,
       onClick: (item) => {
-        navigate(`/invoices/edit/${item.id}`);
+        navigate(`/edit-invoice`);
       },
     },
     {
       title: 'View',
       icon: FiEye,
       onClick: (item) => {
-        navigate(`/invoices/preview/${item.id}`);
+        navigate(`/preview-invoice`);
       },
     },
     {
@@ -432,8 +433,8 @@ export function PatientTable({ data, functions, used }) {
 export function DoctorsTable({ data, functions, doctor }) {
   const DropDown1 = [
     {
-      title: 'View',
-      icon: FiEye,
+      title: doctor ? 'View' : 'Edit',
+      icon: doctor ? FiEye : FiEdit,
       onClick: (data) => {
         functions.preview(data);
       },
