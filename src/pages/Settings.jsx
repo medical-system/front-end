@@ -1,8 +1,8 @@
 import React, {useState } from 'react';
 import { BiUserPlus } from 'react-icons/bi';
 import { RiLockPasswordLine } from 'react-icons/ri';
-import PersonalInfo from '../views/settings/PersonalInfo';
-import ChangePassword from '../views/settings/ChangePassword';
+import PersonalInfo from '../components/common/PersonalInfo';
+import ChangePassword from '../components/common/ChangePassword';
 
 function Settings() {
   const [img, setImg] = useState('./src/assets/profile-img.png')

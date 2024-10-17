@@ -12,15 +12,16 @@ import InvoiceUsed from '../../components/common/InvoiceUsed';
 import Access from '../../components/common/Access';
 import { MdOutlineMarkChatUnread } from 'react-icons/md';
 import ReviewsUsed from '../../components/common/ReviewsUsed';
-
+import ProfileImg from '../../assets/profile-img.png';
 function DoctorProfile() {
   const [activeTab, setActiveTab] = React.useState(1);
   const [access, setAccess] = React.useState({});
+  const [img,setImg] = React.useState(ProfileImg)
 
   const tabPanel = () => {
     switch (activeTab) {
       case 1:
-        return <PersonalInfo titles={true} />;
+        return <PersonalInfo titles={true} setImg={setImg}/>;
       case 2:
         return <PatientsUsed />;
       case 3:
@@ -60,7 +61,7 @@ function DoctorProfile() {
           className="col-span-12 flex-colo gap-6 lg:col-span-4 bg-white rounded-xl border-[1px] border-border p-6 lg:sticky top-28"
         >
           <img
-            src="./src/assets/profile-img.png"
+            src={img}
             alt="setting"
             className="w-40 h-40 rounded-full object-cover border border-dashed border-subMain"
           />

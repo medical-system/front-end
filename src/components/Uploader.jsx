@@ -13,7 +13,7 @@ const Uploader = ({ setImg }) => {
       const file = acceptedFiles[0]
       const IMGURL = URL.createObjectURL(file);
       setPreviewImg(IMGURL);
-      setImg(IMGURL);
+      setImg && setImg(IMGURL);
       setLoading(false);
     }
   }, [setImg]);

@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { IoArrowBackOutline } from 'react-icons/io5';
 import { Button, Checkbox, Select, Textarea } from '../../components/Form';
 import { BiChevronDown, BiPlus } from 'react-icons/bi';
+import ProfileImg from '../../assets/profile-img.png';
 import {
   medicineData,
   memberData,
@@ -21,7 +21,6 @@ const doctorsData = memberData.map((item) => {
     name: item.title,
   };
 });
-
 function NewMedicalRecode() {
   const [doctors, setDoctors] = useState(doctorsData[0]);
   const [isOpen, setIsOpen] = useState(false);
@@ -64,12 +63,12 @@ function NewMedicalRecode() {
         )
       }
       <div className="flex items-center gap-4">
-        <Link
-          to={`/preview-patient`}
+        <button
+          onClick={() => history.back()}
           className="bg-white border border-subMain border-dashed rounded-lg py-3 px-4 text-md"
         >
           <IoArrowBackOutline />
-        </Link>
+        </button>
         <h1 className="text-xl font-semibold">New Medical Record</h1>
       </div>
       <div className=" grid grid-cols-12 gap-6 my-8 items-start">
@@ -81,7 +80,7 @@ function NewMedicalRecode() {
           className="col-span-12 flex-colo gap-6 lg:col-span-4 bg-white rounded-xl border-[1px] border-border p-6 lg:sticky top-28"
         >
           <img
-            src="./src/assets/profile-img.png"
+            src={ProfileImg}
             alt="setting"
             className="w-40 h-40 rounded-full object-cover border border-dashed border-subMain"
           />
@@ -185,7 +184,7 @@ function NewMedicalRecode() {
                       className="w-full  md:h-40 rounded-lg object-cover"
                     />
                     <button
-                      onClick={()=> {}}
+                      onClick={() => { }}
                       className="bg-white rounded-full w-8 h-8 flex-colo absolute -top-1 -right-1"
                     >
                       <FaTimes className="text-red-500" />
@@ -199,7 +198,7 @@ function NewMedicalRecode() {
             <Button
               label={'Save'}
               Icon={HiOutlineCheckCircle}
-              onClick={() => {}}
+              onClick={() => { }}
             />
           </div>
         </div>

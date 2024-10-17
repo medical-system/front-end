@@ -4,8 +4,13 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import RHFTextField from "../../components/hook-form/RHFTextField";
 import { LoginSchema } from "../../validation/loginSchema";
 import { BiLogInCircle } from "react-icons/bi";
-
+import { useNavigate } from "react-router-dom";
+import { login } from '../../store/slices/auth'
+import { useDispatch } from "react-redux";
 const LoginForm = () => {
+  const dispatch = useDispatch()
+  const navigate = useNavigate();
+  
   const methods = useForm({
     resolver: yupResolver(LoginSchema),
     defaultValues: {
@@ -22,10 +27,9 @@ const LoginForm = () => {
   } = methods;
   const onSubmit = async (data) => {
     try {
-      console.log(data);
-      // submit data to backend
+      dispatch(login(data))
+      navigate("/dashboard");
     } catch (error) {
-      console.log(error);
       reset();
       setError("afterSubmit", {
         ...error,

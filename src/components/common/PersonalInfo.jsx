@@ -8,7 +8,7 @@ import { toast } from 'react-hot-toast';
 import { HiOutlineCheckCircle } from 'react-icons/hi';
 import { RiDeleteBin5Line } from 'react-icons/ri';
 
-function PersonalInfo({ titles }) {
+function PersonalInfo({ titles , setImg }) {
   const [title, setTitle] = React.useState(sortsDatas.title[0]);
   const [date, setDate] = React.useState(new Date());
   const [gender, setGender] = React.useState(sortsDatas.genderFilter[0]);
@@ -17,7 +17,7 @@ function PersonalInfo({ titles }) {
       {/* uploader */}
       <div className="flex gap-3 flex-col w-full col-span-6">
         <p className="text-sm">Profile Image</p>
-        <Uploder />
+        <Uploder setImg={setImg} />
       </div>
       {/* select  */}
       {titles && (

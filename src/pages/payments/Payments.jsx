@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { useState } from 'react';
 import { Button, FromToDate, Select } from '../../components/Form';
 import { Transactiontable } from '../../components/ui/tables';
@@ -60,11 +59,11 @@ function Payments() {
   ];
 
   const editPayment = (id) => {
-    navigate(`/edit-payment`);
+    navigate(`/payments/edit/${id}`);
   };
   // preview
   const previewPayment = (id) => {
-    navigate(`/preview-payment`);
+    navigate(`/payments/preview/${id}`);
   };
 
   return (

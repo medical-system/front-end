@@ -57,15 +57,15 @@ const Router = () => {
                     element: <Patients />,
                 },
                 {
-                    path: "/create-patient", // Parent route for patients
+                    path: "/patients/create", // Parent route for patients
                     element: <CreatePatient />,
                 },
                 {
-                    path: "/preview-patient", // Parent route for patients
+                    path: "/patients/preview/:id", // Parent route for patients
                     element: <PreviewPatient />,
                 },
                 {
-                    path: "/new-medical-record", // Parent route for patients
+                    path: "/new-medical-record/:id", // Parent route for patients
                     element: <NewMedicalRecode />,
                 },
                 {
@@ -77,7 +77,7 @@ const Router = () => {
                     element: <Doctors />
                 },
                 {
-                    path: "preview-doctor",
+                    path: "doctors/preview/:id",
                     element: <DoctorProfile />
                 },
                 {
@@ -89,11 +89,11 @@ const Router = () => {
                     element: <Payments />
                 },
                 {
-                    path: "/preview-payment",
+                    path: "/payments/preview/:id",
                     element: <PreviewPayment />
                 },
                 {
-                    path: "/edit-payment",
+                    path: "/payments/edit/:id",
                     element: <EditPayment />
                 },
                 {
@@ -101,15 +101,15 @@ const Router = () => {
                     element: <Invoices />
                 },
                 {
-                    path: "create-invoice",
+                    path: "invoices/create",
                     element: <CreateInvoice />
                 },
                 {
-                    path: "preview-invoice",
+                    path: "invoices/preview/:id",
                     element: <PreviewInvoice />
                 },
                 {
-                    path: "edit-invoice",
+                    path: "invoices/edit/:id",
                     element: <EditInvoice />
                 },
                 {
@@ -131,7 +131,8 @@ const Router = () => {
                 {
                     path:'campaigns',
                     element:<Campaings/>
-                }
+                },
+                
 
 
             ]

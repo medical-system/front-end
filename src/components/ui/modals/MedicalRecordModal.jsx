@@ -65,9 +65,9 @@ function MedicalRecodModal({ closeModal, isOpen, datas }) {
           <div className="col-span-12 md:col-span-9 border-[1px] border-border rounded-xl p-6 xs:grid-cols-2 md:grid-cols-4 grid gap-4">
             {
               // show attachments
-              datas?.attachments?.map((item) => (
+              datas?.attachments?.map((item,index) => (
                 <img
-                  key={item}
+                  key={index}
                   src={item}
                   alt="attachment"
                   className="w-full md:h-32 object-cover rounded-md"

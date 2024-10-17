@@ -12,7 +12,8 @@ export default {
         "text":"#f2f9fa",
         "textGray":"#a0a0a0",
         "border":"#e8edee",
-        "dry":"#f8fafa"
+        "dry":"#f8fafa",
+        "greyed":"#f5f7f8"
       },
       screens:{
         'xs': '475px',

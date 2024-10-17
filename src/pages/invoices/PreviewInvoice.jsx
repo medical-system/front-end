@@ -10,6 +10,7 @@ import { RiShareBoxLine } from 'react-icons/ri';
 import ShareModal from '../../components/ui/modals/ShareModal';
 import SenderReceverComp from '../../views/SenderReceverComp';
 import { InvoiceProductsTable } from '../../components/ui/tables';
+import Logo from '../../assets/logo.png';
 
 function PreviewInvoice() {
   const id = 206719
@@ -95,7 +96,7 @@ function PreviewInvoice() {
         <div className="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-2 items-center">
           <div className="lg:col-span-3">
             <img
-              src="./src/assets/logo.png"
+              src={Logo}
               alt="logo"
               className=" h-12 object-contain"
             />

@@ -2,6 +2,8 @@
 import Modal from './Modal';
 import { FiPhoneCall } from 'react-icons/fi';
 import { FaTimes } from 'react-icons/fa';
+import UserImg from '../../../assets/user5.png';
+
 function ChatVideoAndCall({ closeModal, isOpen, video }) {
   return (
     <Modal closeModal={closeModal} isOpen={isOpen} width={'max-w-xl'}>
@@ -11,7 +13,7 @@ function ChatVideoAndCall({ closeModal, isOpen, video }) {
             <img
               className="w-28 h-28 rounded-full border object-cover"
               alt="user"
-              src="/images/user1.png"
+              src={UserImg}
             />
             <h2 className="font-semibold">Minah Mmassy</h2>
             <p className="text-subMain text-xs">Calling....</p>
@@ -39,7 +41,7 @@ function ChatVideoAndCall({ closeModal, isOpen, video }) {
             <img
               className="w-full h-96 rounded border object-cover"
               alt="user"
-              src="/images/user1.png"
+              src={UserImg}
             />
             <h2 className="font-semibold">Minah Mmassy</h2>
             <p className="text-subMain text-xs">Calling....</p>

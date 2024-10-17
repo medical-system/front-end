@@ -16,5 +16,13 @@ import "apexcharts/dist/apexcharts.css";
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 
+import { Provider } from "react-redux";
+import {store} from "./store";
+
 AOS.init();
-createRoot(document.getElementById("root")).render(<App />);
+const root = document.getElementById("root");
+createRoot(root).render(
+    <Provider store={store}>
+        <App />
+    </Provider>
+);

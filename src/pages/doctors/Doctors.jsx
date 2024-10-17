@@ -17,8 +17,7 @@ function Doctors() {
   };
 
   const preview = (data) => {
-    // navigate(`/doctors/preview/${data.id}`);
-    navigate(`/preview-doctor`);
+    navigate(`/doctors/preview/${data.id}`);
   };
 
   return (

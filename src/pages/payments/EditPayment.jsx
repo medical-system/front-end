@@ -11,6 +11,7 @@ import {
 import { BiChevronDown } from 'react-icons/bi';
 import SenderReceverComp from '../../views/SenderReceverComp';
 import { InvoiceProductsTable } from '../../components/ui/tables';
+import Logo from '../../assets/logo.png';
 
 function EditPayment() {
   const id = 1
@@ -39,7 +40,7 @@ function EditPayment() {
         <div className="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-2 items-center">
           <div className="lg:col-span-3 flex items-center gap-4">
             <img
-              src="./src/assets/logo.png"
+              src={Logo}
               alt="logo"
               className="h-12 object-contain"
             />

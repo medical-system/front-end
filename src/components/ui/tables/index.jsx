@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { MenuSelect } from '../../Form';
 import { BiDotsHorizontalRounded } from 'react-icons/bi';
@@ -115,14 +114,14 @@ export function InvoiceTable({ data }) {
       title: 'Edit',
       icon: FiEdit,
       onClick: (item) => {
-        navigate(`/edit-invoice`);
+        navigate(`/invoices/edit/${item.id}`);
       },
     },
     {
       title: 'View',
       icon: FiEye,
       onClick: (item) => {
-        navigate(`/preview-invoice`);
+        navigate(`/invoices/preview/${item.id}`);
       },
     },
     {

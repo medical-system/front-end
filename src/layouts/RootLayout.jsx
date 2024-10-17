@@ -5,9 +5,10 @@ import { Navigate, Outlet } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 import Navbar from "../components/Navbar";
 import { useSidebarToggle } from "../hooks/useSidebarToggle";
+import { useSelector } from "react-redux";
 
 const RootLayout = () => {
-  const isAuth = true;
+  const { isAuth } = useSelector((state) => state.auth);
   const [isOpen, setIsOpen] = useSidebarToggle();
 
   if (!isAuth) {
