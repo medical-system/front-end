@@ -4,6 +4,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import RHFTextField from "../../components/hook-form/RHFTextField";
 import { BiLogInCircle } from "react-icons/bi";
 import { RegisterSchema } from "../../validation/RegisterSchema";
+import { Link } from "react-router-dom";
 
 const RegisterForm = () => {
   const methods = useForm({
@@ -61,6 +62,7 @@ const RegisterForm = () => {
         <button className="w-full flex-rows gap-4 hover:opacity-80 transitions bg-subMain text-white text-sm font-medium px-2 py-4 rounded leading-[1.2]">
           Register <BiLogInCircle size={20} className="text-xl text-white" />
         </button>
+        <p className="text-sm me-auto">Already have an account? <Link to="/auth/login" className="text-blue-700">Login</Link></p>
       </div>
     </FormProvider>
   );
