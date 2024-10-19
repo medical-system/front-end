@@ -4,9 +4,15 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import RHFTextField from "../../components/hook-form/RHFTextField";
 import { BiLogInCircle } from "react-icons/bi";
 import { RegisterSchema } from "../../validation/RegisterSchema";
-import { Link } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
+import { register } from '../../store/slices/auth'
+import { useDispatch } from "react-redux";
+import Swal from "sweetalert2";
 const RegisterForm = () => {
+
+  const dispatch = useDispatch()
+  const navigate = useNavigate();
+
   const methods = useForm({
     resolver: yupResolver(RegisterSchema),
     defaultValues: {
@@ -32,21 +38,27 @@ const RegisterForm = () => {
         },
         body: JSON.stringify(data),
       })
-      if(!response.ok) {
+      if (!response.ok) {
         const error = await response.json();
         throw new Error(error.error);
-        
       }
-      // submit data to backend
+      Swal.fire({
+        title: "Register Success",
+        icon: "success",
+      }).then(result => {
+        if (result.isConfirmed) {
+          dispatch(register(data))
+          navigate('/dashboard')
+        }
+      })
     } catch (error) {
       reset();
       setError("afterSubmit", {
         ...error,
         message: error.message || error,
       });
-      console.log(errors.afterSubmit.message)
     }
-    
+
   };
   return (
     <FormProvider methods={methods} onSubmit={handleSubmit(onSubmit)}>
