@@ -19,7 +19,7 @@ const LoginForm = () => {
     resolver: yupResolver(LoginSchema),
     defaultValues: {
       email: "admin@gmail.com",
-      password: "admin123",
+      password: "admin123@Password",
     },
   });
 
@@ -78,6 +78,7 @@ const LoginForm = () => {
       <div className="flex-colo gap-4 w-full">
         <RHFTextField name="email" label="Email" type="email" />
         <RHFTextField name="password" label="Password" type="password" />
+        <Link to='/auth/forgot-password' className="text-start me-auto text-blue-800 text-sm">Forgot Password?</Link>
         <button className="w-full flex-rows gap-4 hover:opacity-80 transitions bg-subMain text-white text-sm font-medium px-2 py-4 rounded leading-[1.2]">
           Login <BiLogInCircle size={20} className="text-xl text-white" />
         </button>

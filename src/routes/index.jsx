@@ -26,6 +26,8 @@ import Medicines from "../pages/Medicins.jsx";
 import Chats from "../pages/Chats.jsx";
 import Reviews from "../pages/Reviews.jsx";
 import Campaings from "../pages/Campaings.jsx";
+import ForgotPassword from "../pages/auth/ForgotPassword.jsx";
+import ChangePassword from "../pages/auth/ChangePassword.jsx";
 const Router = () => {
     return useRoutes([
         {
@@ -34,6 +36,8 @@ const Router = () => {
             children: [
                 { path: "login", element: <Login /> },
                 { path: "register", element: <Register /> },
+                { path: "forgot-password", element: <ForgotPassword /> },
+                { path: "change-password", element: <ChangePassword /> },
             ]
         },
         {
