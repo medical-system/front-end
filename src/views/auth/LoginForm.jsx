@@ -31,6 +31,26 @@ const LoginForm = () => {
   } = methods;
   const onSubmit = async (data) => {
     try {
+      const URL = "https://medical-system.runasp.net/api/auth/login";
+      const response = await fetch(URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+
+      if (!response.ok) {
+        const error = await response.json();
+       if(Array.isArray(error.errors)){
+        throw new Error(error.errors[1]);
+       }else {
+        throw new Error(error.errors.Password);
+       }
+
+      }
+      const result = await response.json();
+      console.log(result)
       Swal.fire({
         title: "Login Success",
         icon: "success",
@@ -52,7 +72,7 @@ const LoginForm = () => {
     <FormProvider methods={methods} onSubmit={handleSubmit(onSubmit)}>
       <div spacing={3}>
         {!!errors.afterSubmit && (
-          <p className="text-red-500">{errors.afterSubmit.message}</p>
+          <p className="text-red-500 me-auto text-start">{errors.afterSubmit.message}</p>
         )}
       </div>
       <div className="flex-colo gap-4 w-full">

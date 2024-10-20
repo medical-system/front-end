@@ -29,7 +29,7 @@ const RegisterForm = () => {
     formState: { errors },
   } = methods;
   const onSubmit = async (data) => {
-    const URL = "http://medical-system.runasp.net/Auth/register";
+    const URL = "https://medical-system.runasp.net/api/Auth/register";
     try {
       const response = await fetch(URL, {
         method: "POST",
