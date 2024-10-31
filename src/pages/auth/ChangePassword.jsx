@@ -6,10 +6,12 @@ import { BiLogInCircle } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import * as yup from "yup";
+
 const ChangePasswordSchema = yup.object().shape({
-    password: yup.string().min(6, 'Password must be at least 6 characters long').required('Password is required'),
-    confirmPassword: yup.string().oneOf([yup.ref('password'), null], 'Passwords must match'),
+  password: yup.string().min(6, 'Password must be at least 6 characters long').required('Password is required'),
+  confirmPassword: yup.string().oneOf([yup.ref('password'), null], 'Passwords must match'),
 })
+
 const ChangePassword = () => {
 
   const navigate = useNavigate();
@@ -24,20 +26,43 @@ const ChangePassword = () => {
 
   const {
     // reset,
-    // setError,
+    setError,
     handleSubmit,
     formState: { errors },
   } = methods;
-  const onSubmit = async () => {
-    Swal.fire({
-      title: "Password Changed Successfully",
-      icon: "success",
-    }).then(result => {
-      if (result.isConfirmed) {
-        navigate('/auth/login')
+  const onSubmit = async (data) => {
+    try {
+      console.log(data)
+      const URL = "https://medical-system.runasp.net/api/Auth/reset-password";
+      const response = await fetch(URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+      if (!response.ok) {
+        console.log(response)
+        // // const error = await response.json();
+        // throw new Error('faild to fetch');
       }
-    })
-  };
+      Swal.fire({
+        title: "Password changed successfully",
+        icon: "success",
+      }).then(result => {
+        if (result.isConfirmed) {
+          navigate('/auth/login')
+        }
+      })
+    } catch (error) {
+      setError("afterSubmit", {
+        ...error,
+        message: error.message || error,
+      })
+    }
+  }
+
+
   return (
     <FormProvider methods={methods} onSubmit={handleSubmit(onSubmit)}>
       <div spacing={3}>
