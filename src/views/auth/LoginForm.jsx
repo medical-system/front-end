@@ -82,7 +82,7 @@ const LoginForm = () => {
         <button className="w-full flex-rows gap-4 hover:opacity-80 transitions bg-subMain text-white text-sm font-medium px-2 py-4 rounded leading-[1.2]">
           Login <BiLogInCircle size={20} className="text-xl text-white" />
         </button>
-        <p className="text-start text-sm me-auto">Don't have an account? <Link className="text-blue-700" to="/auth/register">Sign Up</Link></p>
+        <p className="text-start text-sm me-auto">Don't have an account? <Link className="text-blue-800" to="/auth/register">Sign Up</Link></p>
       </div>
     </FormProvider>
   );

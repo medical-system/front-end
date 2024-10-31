@@ -74,7 +74,7 @@ const RegisterForm = () => {
         <button className="w-full flex-rows gap-4 hover:opacity-80 transitions bg-subMain text-white text-sm font-medium px-2 py-4 rounded leading-[1.2]">
           Register <BiLogInCircle size={20} className="text-xl text-white" />
         </button>
-        <p className="text-sm me-auto">Already have an account? <Link to="/auth/login" className="text-blue-700">Login</Link></p>
+        <p className="text-sm me-auto">Already have an account? <Link to="/auth/login" className="text-blue-800">Login</Link></p>
       </div>
     </FormProvider>
   );

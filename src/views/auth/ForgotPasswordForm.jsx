@@ -4,12 +4,10 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import RHFTextField from "../../components/hook-form/RHFTextField";
 import { BiLogInCircle } from "react-icons/bi";
-import { useNavigate } from "react-router-dom";
 import * as yup from "yup";
+import Swal from "sweetalert2";
 
 const ForgotPasswordForm = () => {
-    const navigate = useNavigate();
-
 
     const methods = useForm({
         resolver: yupResolver(yup.object().shape({
@@ -27,9 +25,25 @@ const ForgotPasswordForm = () => {
         formState: { errors },
     } = methods;
     const onSubmit = async (data) => {
+        const URL = "https://medical-system.runasp.net/api/Auth/forget-password";
         try {
-            console.log(data)
-            navigate('/auth/change-password')
+            const response = await fetch(URL, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+            });
+            if (!response.ok) {
+                const error = await response.json();
+                throw new Error(error.error);
+            }
+            Swal.fire({
+                title: "email sent successfully",
+                text: "check your gmail to reset your password",
+                icon: "success"
+            })
+            
         } catch (error) {
             console.log(error)
         }
