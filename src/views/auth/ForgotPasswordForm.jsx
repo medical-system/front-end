@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import FormProvider from "../../components/hook-form/FormProvider";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
